@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Quiz</title>
+</head>
+
+<body>
+    <h1>Question {{ question_index + 1 }}</h1>
+    <p>{{ question[1] }}</p>
+    <form action="/quiz" method="POST">
+        <input type="radio" name="option" value="1"> {{ question[2] }}<br>
+        <input type="radio" name="option" value="2"> {{ question[3] }}<br>
+        <input type="radio" name="option" value="3"> {{ question[4] }}<br>
+        <input type="radio" name="option" value="4"> {{ question[5] }}<br>
+        <input type="hidden" name="question_index" value="{{ question_index }}">
+        <input type="submit" value="Next">
+    </form>
+</body>
+
+</html>
